@@ -1,0 +1,572 @@
+@charset "UTF-8";
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+/*LOADER*/
+.loader {
+  position: fixed;
+  background-color: #F6F6F6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  animation: loaderoff 1s ease-out forwards;
+  animation-delay: 4.5s;
+}
+@keyframes loaderoff {
+  0% {
+    transform: scaleZ(1);
+  }
+  100% {
+    transform: scaleZ(0);
+    opacity: 0;
+  }
+}
+.loader .letter {
+  font-family: "Shrikhand", cursive;
+  font-size: 45px;
+  animation: loadingpageup 1s ease-out forwards;
+}
+@keyframes loadingpageup {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes loadingpagecolor {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+}
+.loader .letter:nth-child(1) {
+  animation-name: loadingpagecolor;
+  animation-delay: 0.5s;
+}
+.loader .letter:nth-child(2) {
+  animation-name: loadingpagecolor;
+  animation-delay: 1s;
+}
+.loader .letter:nth-child(3) {
+  animation-name: loadingpagecolor;
+  animation-delay: 1.5s;
+}
+.loader .letter:nth-child(4) {
+  animation-name: loadingpagecolor;
+  animation-delay: 2s;
+}
+.loader .letter:nth-child(5) {
+  animation-name: loadingpagecolor;
+  animation-delay: 2.5s;
+}
+.loader .letter:nth-child(6) {
+  animation-name: loadingpagecolor;
+  animation-delay: 3s;
+}
+.loader .letter:nth-child(7) {
+  animation-name: loadingpagecolor;
+  animation-delay: 3.5s;
+}
+.loader .letter:nth-child(8) {
+  animation-name: loadingpagecolor;
+  animation-delay: 4s;
+}
+
+/*Header*/
+header {
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.1490196078);
+}
+
+.LogoHeader {
+  text-align: center;
+  padding: 20px;
+}
+
+.LocationBar {
+  background-color: #EAEAEA;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.SearchBar {
+  background-color: #EAEAEA;
+  border: none;
+  text-align: center;
+  color: #353535;
+}
+
+/*Réservation*/
+.Fond_Section {
+  display: flex;
+  background-color: #F6F6F6;
+  flex-direction: column;
+  /*PAGES MENU*/
+}
+.Fond_Section--MenuEPD {
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  border-radius: 35px 35px 0 0;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal {
+  animation: appear 2s;
+  animation-fill-mode: both;
+}
+@keyframes appear {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(1) {
+  animation-delay: 100ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(2) {
+  animation-delay: 200ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(3) {
+  animation-delay: 300ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(4) {
+  animation-delay: 400ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(5) {
+  animation-delay: 500ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(6) {
+  animation-delay: 600ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(7) {
+  animation-delay: 700ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(8) {
+  animation-delay: 800ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(9) {
+  animation-delay: 900ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(10) {
+  animation-delay: 1000ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(11) {
+  animation-delay: 1100ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(12) {
+  animation-delay: 1200ms;
+}
+.Fond_Section--MenuEPD .MenuEPD .MenuCardMeal:nth-child(13) {
+  animation-delay: 1300ms;
+}
+.Fond_Section--MenuEPD .Titre_Menu {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.Fond_Section--MenuEPD h2 {
+  margin-left: 20px;
+  font-family: "Shrikhand", cursive;
+}
+.Fond_Section--MenuEPD .coeuricon {
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+}
+.Fond_Section--MenuEPD .coeuricon + .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.Fond_Section--MenuEPD .coeuricon + .fa-solid:hover {
+  opacity: 1;
+}
+.Fond_Section--MenuEPD h4 {
+  margin-left: 15px;
+  font-weight: lighter;
+}
+.Fond_Section--MenuEPD h4::after {
+  display: block;
+  content: "";
+  background-color: #99E2D0;
+  width: 40px;
+  height: 3px;
+}
+
+.Reservation_Title, .Reservation_Text {
+  text-align: center;
+}
+
+.Reservation_Title {
+  margin: 40px 30px 20px 30px;
+}
+
+.Reservation_Text {
+  font-weight: lighter;
+  margin-top: 0;
+}
+
+.Reservation_Boutton {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 15px;
+  width: 218px;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  margin-bottom: 50px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1490196078);
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+}
+.Reservation_Boutton-Menu {
+  width: 186px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.Reservation_Boutton:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/*FONCTIONNEMENT*/
+.Fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+
+.Main_Title {
+  margin: 40px 0px 30px 15px;
+}
+
+.Fonctionnement_Cards {
+  background-color: #F6F6F6;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  position: relative;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1490196078);
+}
+.Fonctionnement_Cards:hover {
+  transform: scale(1.02);
+}
+.Fonctionnement_Cards:hover .fa_color {
+  color: #9356DC;
+}
+.Fonctionnement_Cards .Prix_Menu {
+  margin-left: auto;
+  margin-top: auto;
+  padding: 10px;
+}
+.Fonctionnement_Cards-Menu {
+  display: flex;
+  padding: 0;
+  margin-bottom: 15px;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  width: 94%;
+  text-align: start;
+  border-radius: 15px;
+  overflow: hidden;
+  /*CHECK*/
+}
+.Fonctionnement_Cards-Menu:hover .Slide_Check {
+  margin-right: 0px;
+}
+.Fonctionnement_Cards-Menu:hover .Slide_Check .checkicon {
+  animation: iconrotation 1s;
+}
+.Fonctionnement_Cards-Menu .Slide_Check {
+  transition: all 1s;
+  background-color: #99E2D0;
+  display: flex;
+  margin-right: -70px;
+  width: 70px;
+  border-radius: 0px 15px 15px 0px;
+}
+.Fonctionnement_Cards-Menu .Slide_Check .checkicon {
+  color: #99E2D0;
+  margin: auto;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  width: 26px;
+  padding: 5px 0px 5px 0px;
+}
+@keyframes iconrotation {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.Fonctionnement_Cards-Menu .MenuDescription {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px;
+  width: 85%;
+}
+.Fonctionnement_Cards-Menu:hover {
+  transform: none;
+}
+.Fonctionnement_Cards-Menu h3 {
+  margin: 0 0 5px 0;
+  font-weight: 500;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Fonctionnement_Cards-Menu p {
+  font-weight: lighter;
+  font-size: 13px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Fonctionnement_Cards .margeicon {
+  margin-right: 20px;
+}
+.Fonctionnement_Cards-Pastille {
+  color: #FFFFFF;
+  background-color: #9356DC;
+  border-radius: 100px;
+  width: 20px;
+  position: absolute;
+  left: -5px;
+  top: 25px;
+}
+.Fonctionnement_Cards-Pastille p {
+  padding: 0px;
+  margin: 0;
+}
+
+/* RESTAURANTS*/
+.Card-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.Card-container a {
+  text-decoration: none;
+  color: black;
+}
+.Card-container .Card {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  margin: 0px 15px 20px 15px;
+  height: 250px;
+}
+.Card-container .Card-subtitle {
+  font-weight: lighter;
+}
+.Card-container .Card-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+.Card-container .Card img {
+  height: 190px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-bottom: 10px;
+}
+.Card-container .Card-title, .Card-container .Card-subtitle {
+  margin: auto;
+  margin-left: 15px;
+}
+.Card-container .Card_Pastille {
+  display: flex;
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  border-radius: 2px;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
+.Card-container .Card_Pastille p {
+  color: #008766;
+  text-align: center;
+  margin: auto;
+}
+.Card-container .Card .coeurfav {
+  position: absolute;
+  right: 25px;
+  bottom: 10px;
+}
+.Card-container .Card .coeurfav + .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.Card-container .Card .coeurfav + .fa-solid:hover {
+  opacity: 1;
+}
+
+/*FOOTER*/
+.BasDePage {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  width: 100%;
+}
+.BasDePage .Footer-logo {
+  font-family: "Shrikhand", cursive;
+  margin-top: 0;
+  color: #FFFFFF;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.BasDePage .Footer-Liste p {
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+.BasDePage .Footer-Liste a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.BasDePage .Footer-Liste .footericon {
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+
+/* MEDIA QUERIES DESKTOP*/
+@media (min-width: 1280px) {
+  .Main_Title {
+    margin-left: 140px;
+  }
+  /* FONCTIONNEMENT*/
+  .Fonctionnement {
+    flex-direction: row;
+  }
+  .Fonctionnement_Cards {
+    width: 20%;
+    margin: 0px 0px 60px 140px;
+  }
+  /*SECTION MENUS*/
+  .ImgPlat img {
+    height: 383px;
+  }
+  .Fond_Section--MenuEPD {
+    width: 75%;
+    margin: auto;
+  }
+  .Fond_Section--MenuEPD .Titre_Menu {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: auto;
+  }
+  .Fonctionnement_Cards-Menu {
+    margin: 0px 0px 15px 0px;
+    width: 100%;
+  }
+  .Fonctionnement_Cards-Menu .Slide_Check {
+    width: 65px;
+    margin-right: -65px;
+  }
+  .Fonctionnement_Cards-Menu .Slide_Check .checkicon {
+    width: 40%;
+  }
+  .MenuEPD {
+    width: 50%;
+    margin: auto;
+  }
+  .MenuEPD h4 {
+    margin-left: 0;
+  }
+  /* RESTAURANTS*/
+  .Card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Card {
+    width: 40%;
+  }
+  /*FOOTER*/
+  .BasDePage {
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+  .BasDePage .Footer-logo {
+    margin: 50px 50px 30px 100px;
+  }
+  .BasDePage .Footer-Liste {
+    display: flex;
+    flex-direction: row;
+  }
+}
+/*MENUS*/
+.Header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: #FFFFFF;
+}
+.Header .Bouton_Retour {
+  font-size: x-large;
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+.Header .Bouton_Retour i {
+  color: black;
+}
+
+.Img_LNE {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+  position: relative;
+  top: 40px;
+  z-index: -5;
+}
+
+.MenuEPD {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

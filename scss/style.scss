@@ -1,0 +1,645 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+$violet: #9356DC;
+$vert:#99E2D0;
+$background1: #F6F6F6;
+$background2: #EAEAEA;
+@mixin element-shadow{
+    box-shadow: 3px 5px 10px #00000026;
+}
+@mixin element-zoom{
+    transform: scale(1.02);
+}
+
+@mixin gradient-color{
+    background-image: linear-gradient(170deg,#FF79DA,#9356DC);
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 24px;
+}
+
+/*LOADER*/
+
+.loader{
+    position: fixed;
+    background-color: $background1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    animation: loaderoff 1s ease-out forwards;
+    animation-delay: 4.5s;
+
+    @keyframes loaderoff {
+        0%{
+            transform: scaleZ(1);
+        }
+        100%{
+            transform: scaleZ(0);
+            opacity: 0;
+        }
+        
+    }
+
+    .letter{
+        font-family: 'Shrikhand', cursive;
+        font-size: 45px;
+        animation: loadingpageup 1s ease-out forwards;
+
+        @keyframes loadingpageup {
+            0%{
+                transform: translateY(100%);
+            }
+            100%{
+                transform: translate(0);
+            }
+        }
+
+        @keyframes loadingpagecolor {
+            0%{
+                color: $violet;
+                text-shadow: 0 0 7px $violet;
+            }
+            100%{
+                color: $violet;
+                text-shadow: 0 0 7px $violet;
+            }
+            
+        }
+
+        // @for $u from 1 through 8{
+        //     &:nth-child(#{$u}){
+        //         animation-name: loadingpageup;
+        //         animation-delay: 1s * $u;
+        //     }
+        // }
+
+        @for $u from 1 through 8{
+            &:nth-child(#{$u}){
+                animation-name: loadingpagecolor;
+                animation-delay: 0.5s * $u;
+                // animation-timing-function: cubic-bezier(0,.38,.89,-0.12);
+            } 
+        }
+    }
+    
+    
+}
+
+
+/*Header*/
+
+header{
+    box-shadow: 0px 4px 3px #00000026;
+}
+
+
+.LogoHeader {
+    text-align: center;
+    padding: 20px;
+}
+
+.LocationBar{
+    background-color: $background2;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.SearchBar {
+    background-color: $background2;
+    border: none;
+    text-align: center;
+    color: #353535;
+}
+
+/*Réservation*/
+
+.Fond_Section{
+    display: flex;
+    background-color: $background1;
+    flex-direction: column;
+    
+    /*PAGES MENU*/
+    &--MenuEPD{
+        display: flex;
+        z-index: 1;
+        width: 100%;
+        border-radius: 35px 35px 0 0;
+        
+        .MenuEPD{
+            .MenuCardMeal{
+                animation: appear 2s;
+                animation-fill-mode: both;
+                
+                @keyframes appear {
+                    0% {
+                        transform: translateY(100%);
+                        opacity: 0;
+                    }
+                    
+                    100%{
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+                @for $i from 1 through 13{
+                    &:nth-child(#{$i}){
+                        animation-delay: 100ms * $i;
+                    }
+                }
+            }
+            
+        }    
+        
+        
+        .Titre_Menu{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+        
+        h2{
+            margin-left: 20px;
+            font-family: 'Shrikhand', cursive;
+            
+        }
+        
+        .coeuricon{
+            position:absolute;
+            right: 25px;
+            bottom: 30px;
+            
+            & +.fa-solid{
+                color: transparent;
+                @include gradient-color;
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        
+        h4{
+            margin-left: 15px;
+            font-weight: lighter;
+        }
+        
+        h4::after{
+            display: block;
+            content: '';
+            background-color: #99E2D0;
+            width: 40px;
+            height: 3px;
+        }
+        
+    }
+    
+}
+
+.Reservation_Title, .Reservation_Text{
+    text-align: center;
+}
+
+.Reservation_Title{
+    margin: 40px 30px 20px 30px;
+}
+
+.Reservation_Text{
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+.Reservation_Boutton{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 15px;
+    width: 218px;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    margin-bottom: 50px;
+    @include element-shadow;
+    @include gradient-color;
+    
+    &-Menu{
+        width: 186px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        
+    }
+    
+    &:hover{
+        @include element-zoom;
+        opacity: 0.9;
+    }
+}
+
+
+/*FONCTIONNEMENT*/
+
+.Fonctionnement{
+    display: flex;
+    flex-direction: column;
+}
+
+.Main_Title{
+    margin: 40px 0px 30px 15px;
+}
+
+.Fonctionnement_Cards{
+    background-color: $background1;
+    text-align:center;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    @include element-shadow;
+    
+    &:hover{
+        @include element-zoom;
+        
+        .fa_color{
+            color:#9356DC;
+        }
+        
+    }
+    
+    .Prix_Menu{
+        margin-left: auto;
+        margin-top: auto;
+        padding: 10px;
+    }
+    
+    &-Menu{
+        display: flex;
+        padding: 0;
+        margin-bottom: 15px;
+        flex-direction: row;
+        background-color: #FFFFFF;
+        width: 94%;
+        text-align: start;
+        border-radius: 15px;
+        overflow: hidden;
+
+        /*CHECK*/
+        
+        &:hover .Slide_Check{
+            margin-right: 0px;
+
+            .checkicon{
+                animation: iconrotation 1s;
+            }
+        }
+        
+        .Slide_Check{
+            transition: all 1s;
+            background-color: $vert;
+            display: flex;
+            margin-right: -70px;
+            width: 70px;
+            border-radius: 0px 15px 15px 0px;
+            
+            .checkicon{
+                color: $vert;
+                margin: auto;
+                text-align: center;
+                background-color: #FFFFFF;
+                border-radius: 50%;
+                width: 26px;
+                padding: 5px 0px 5px 0px;
+
+                @keyframes iconrotation {
+
+                    0%{
+                       transform: rotate(-270deg); 
+                    }
+
+                    100%{
+                        transform: rotate(0);
+                    }
+                
+                }
+            }
+        }
+        
+        .MenuDescription{
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 10px;
+            width: 85%;
+        }
+        
+        
+        &:hover{
+            transform: none;
+        }
+        
+        h3{
+            margin: 0 0 5px 0;
+            font-weight: 500;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        p{
+            font-weight: lighter;
+            font-size: 13px;
+            margin: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    
+    .margeicon{
+        margin-right: 20px;
+    }
+    
+    &-Pastille{
+        color: #FFFFFF;
+        background-color: #9356DC;
+        border-radius: 100px;
+        width: 20px;
+        position: absolute;
+        left: -5px;
+        top: 25px;
+        
+        p{
+            padding: 0px;
+            margin: 0;
+        }
+        
+    }
+}
+
+/* RESTAURANTS*/
+
+.Card-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .Card{
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        margin: 0px 15px 20px 15px;
+        height: 250px;
+        
+        &-subtitle{
+            font-weight: lighter;
+        }
+        
+        &-content{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: relative;
+        }
+        
+        img{
+            height: 190px;
+            object-fit: cover;
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            margin-bottom: 10px;
+        }
+        
+        &-title, &-subtitle{
+            margin: auto;
+            margin-left: 15px;
+        }
+        
+        &_Pastille{
+            display: flex;
+            width: 80px;
+            height: 29px;
+            background-color: #99E2D0;
+            border-radius: 2px;
+            position: absolute;
+            top: 13px;
+            right: 13px;
+            
+            p{
+                color: #008766;
+                text-align: center;
+                margin: auto;
+            }
+        }
+        
+        .coeurfav{
+            position:absolute;
+            right: 25px;
+            bottom: 10px;
+            
+            & +.fa-solid{
+                color: transparent;
+                @include gradient-color;
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        
+    }
+    
+    
+}
+
+/*FOOTER*/
+
+.BasDePage{
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;   
+    width: 100%;
+    
+    
+    .Footer-logo{
+        font-family: 'Shrikhand', cursive;
+        margin-top: 0;
+        color: #FFFFFF;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    
+    .Footer-Liste{
+        
+        p{
+            color: #FFFFFF;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-bottom: 15px;
+            padding-left: 15px;
+        }
+        
+        a{
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+        
+        .footericon{
+            color: #FFFFFF;
+            margin-right: 10px;
+        }
+    }
+}
+
+/* MEDIA QUERIES DESKTOP*/
+
+@media (min-width: 1280px) {
+    .Main_Title{
+        margin-left: 140px;
+        
+    }
+    
+    /* FONCTIONNEMENT*/
+    
+    .Fonctionnement{
+        flex-direction: row;
+    }
+    .Fonctionnement_Cards{
+        width: 20%;
+        margin: 0px 0px 60px 140px;
+    }
+    
+    /*SECTION MENUS*/
+    
+    .ImgPlat{
+        img{
+            
+            height: 383px;
+        }
+    }
+    
+    .Fond_Section--MenuEPD{
+        width: 75%;
+        margin: auto;
+        
+        .Titre_Menu{
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+            margin: auto;
+        }
+    }
+    
+    .Fonctionnement_Cards-Menu{
+        margin: 0px 0px 15px 0px;
+        width: 100%;
+
+        .Slide_Check{
+            width: 65px;
+            margin-right: -65px;
+
+            .checkicon{
+                width: 40%;
+            }
+        }
+    }
+    
+    .MenuEPD{
+        width: 50%;
+        margin: auto;
+        
+        h4{
+            margin-left: 0;
+        }
+    }
+    
+    /* RESTAURANTS*/
+    
+    .Card-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .Card{
+        width: 40%;
+    }
+    
+    /*FOOTER*/
+    
+    .BasDePage{
+        flex-direction: row-reverse;
+        align-items: baseline;
+        
+        .Footer-logo{
+            margin: 50px 50px 30px 100px;
+        }
+        
+        .Footer-Liste{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    
+}
+
+/*MENUS*/
+
+.Header{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: #FFFFFF;
+    
+    .Bouton_Retour{
+        font-size:x-large;
+        position: absolute;
+        left: 20px;
+        top: 25px;
+        
+        i{
+            color: black;
+        }
+    }
+}
+
+.Img_LNE{
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+    position: relative;
+    top: 40px;
+    z-index: -5;
+}
+
+.MenuEPD{
+    display: flex;
+    flex-direction: column;
+    
+}

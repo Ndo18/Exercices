@@ -1,0 +1,348 @@
+@charset "UTF-8";
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+/*Header*/
+header {
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.1490196078);
+}
+
+.LogoHeader {
+  text-align: center;
+  padding: 20px;
+}
+
+.LocationBar {
+  background-color: #EAEAEA;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.SearchBar {
+  background-color: #EAEAEA;
+  border: none;
+  text-align: center;
+  color: #353535;
+}
+
+/*Réservation*/
+.Fond_Section {
+  display: flex;
+  background-color: #F6F6F6;
+  flex-direction: column;
+  /*PAGES MENU*/
+}
+.Fond_Section--MenuEPD {
+  display: flex;
+  position: relative;
+  bottom: 40px;
+  z-index: 1;
+  width: 100%;
+  border-radius: 35px 35px 0 0;
+}
+.Fond_Section--MenuEPD .Titre_Menu {
+  display: flex;
+  flex-direction: row;
+}
+.Fond_Section--MenuEPD h2 {
+  margin-left: 10px;
+  font-family: "Shrikhand", cursive;
+}
+.Fond_Section--MenuEPD h2 i {
+  margin-left: 20px;
+}
+.Fond_Section--MenuEPD h4 {
+  margin-left: 15px;
+  font-weight: lighter;
+}
+.Fond_Section--MenuEPD h4::after {
+  display: block;
+  content: "";
+  background-color: #99E2D0;
+  width: 40px;
+  height: 3px;
+}
+
+.Reservation_Title, .Reservation_Text {
+  text-align: center;
+}
+
+.Reservation_Title {
+  margin: 40px 30px 20px 30px;
+}
+
+.Reservation_Text {
+  font-weight: lighter;
+  margin-top: 0;
+}
+
+.Reservation_Boutton {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(to left, #FF79DA, #9356DC);
+  border-radius: 25px;
+  padding: 15px;
+  width: 218px;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  margin-bottom: 50px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1490196078);
+}
+.Reservation_Boutton-Menu {
+  width: 186px;
+  margin: auto;
+}
+
+/*FONCTIONNEMENT*/
+.Fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+
+.Main_Title {
+  margin: 40px 0px 30px 15px;
+}
+
+.Fonctionnement_Cards {
+  background-color: #F6F6F6;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1490196078);
+}
+.Fonctionnement_Cards .Prix_Menu {
+  margin-left: auto;
+  margin-top: auto;
+}
+.Fonctionnement_Cards-Menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  position: relative;
+  background-color: #FFFFFF;
+  width: 85%;
+  text-align: start;
+  border-radius: 15px;
+}
+.Fonctionnement_Cards-Menu h3 {
+  margin: 0 0 5px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+.Fonctionnement_Cards-Menu p {
+  font-weight: lighter;
+  font-size: 13px;
+  margin: 0;
+}
+.Fonctionnement_Cards i {
+  margin-right: 20px;
+}
+.Fonctionnement_Cards .fa-store_color {
+  color: #9356DC;
+}
+.Fonctionnement_Cards-Pastille {
+  color: #FFFFFF;
+  background-color: #9356DC;
+  border-radius: 100px;
+  width: 20px;
+  position: absolute;
+  left: -5px;
+  top: 25px;
+}
+.Fonctionnement_Cards-Pastille p {
+  padding: 0px;
+  margin: 0;
+}
+
+/* RESTAURANTS*/
+.Card-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.Card-container a {
+  text-decoration: none;
+  color: black;
+}
+.Card-container .Card {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  margin: 0px 15px 20px 15px;
+  height: 260px;
+  position: relative;
+}
+.Card-container .Card-subtitle {
+  font-weight: lighter;
+}
+.Card-container .Card-content {
+  width: 100%;
+}
+.Card-container .Card img {
+  height: 190px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-bottom: 10px;
+}
+.Card-container .Card-title, .Card-container .Card-subtitle {
+  margin: auto;
+  margin-left: 15px;
+}
+.Card-container .Card_Pastille {
+  display: flex;
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  border-radius: 2px;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
+.Card-container .Card_Pastille p {
+  color: #008766;
+  text-align: center;
+  margin: auto;
+}
+.Card-container .Card_Coeur {
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+}
+.Card-container .Card_Coeur .fa-heart:hover {
+  background-clip: #9356DC;
+}
+
+/*FOOTER*/
+.BasDePage {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  width: 100%;
+}
+.BasDePage .Footer-logo {
+  font-family: "Shrikhand", cursive;
+  margin-top: 0;
+  color: #FFFFFF;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.BasDePage .Footer-Liste {
+  color: #FFFFFF;
+}
+.BasDePage .Footer-Liste p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+.BasDePage .Footer-Liste i {
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+
+/* MEDIA QUERIES DESKTOP*/
+@media (min-width: 1280px) {
+  .Main_Title {
+    margin-left: 140px;
+  }
+  /* FONCTIONNEMENT*/
+  .Fonctionnement {
+    flex-direction: row;
+  }
+  .Fonctionnement_Cards {
+    width: 20%;
+    margin: 0px 0px 60px 140px;
+  }
+  /*SECTION MENUS*/
+  .ImgPlat img {
+    height: 383px;
+  }
+  .Fond_Section--MenuEPD {
+    width: 75%;
+    margin: auto;
+  }
+  .Fond_Section--MenuEPD .Titre_Menu {
+    display: flex;
+    justify-content: center;
+  }
+  .Fonctionnement_Cards-Menu {
+    margin: auto;
+    margin-bottom: 15px;
+    width: 50%;
+  }
+  .MenuEPD h4 {
+    margin-left: 280px;
+  }
+  /* RESTAURANTS*/
+  .Card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Card {
+    width: 40%;
+  }
+  /*FOOTER*/
+  .BasDePage {
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+  .BasDePage .Footer-logo {
+    margin: 50px 50px 30px 100px;
+  }
+  .BasDePage .Footer-Liste {
+    display: flex;
+    flex-direction: row;
+  }
+}
+/*MENUS*/
+.Header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  background-color: #FFFFFF;
+}
+.Header .Bouton_Retour {
+  font-size: x-large;
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+.Header .Bouton_Retour i {
+  color: black;
+}
+
+.Img_LNE {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+}
+
+.MenuEPD {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

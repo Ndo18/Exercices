@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Montserrat:wght@100&family=Roboto:wght@100;500&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/scss/style.css">
+    <title>Homepage</title>
+</head>
+<body>
+    <div class="loader">
+        <span class="letter">o</span>
+        <span class="letter">h</span>
+        <span class="letter">m</span>
+        <span class="letter">y</span>
+        <span class="letter">f</span>
+        <span class="letter">o</span>
+        <span class="letter">o</span>
+        <span class="letter">d</span>
+    </div>
+    <header>
+        <div class="LogoHeader">
+            <img src="/Images_et_textes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="LogoOhmyfood">
+        </div>
+    </header>
+    <div class="LocationBar">
+        <form action="?" method="POST">
+            <label for="search"><i class="fa-solid fa-location-dot"></i></label>
+            <input class="SearchBar" type="text" id="search" name="lieu" placeholder="Paris, Belleville" required>
+        </form>
+    </div>
+    <section class="Fond_Section">
+        <div class="Reservation">
+            <h1 class="Reservation_Title">Réservez le menu qui vous convient</h1>
+            <p class="Reservation_Text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <a class="Reservation_Boutton" href="#Ancreun">Explorer nos restaurants</a>
+        </div>
+    </section>
+    <section>
+        <div class="Main_Title">
+            <h1>Fonctionnement</h1>
+        </div>
+        <div class="Fonctionnement">
+            <div class="Fonctionnement_Cards">
+                <div class="Fonctionnement_Cards-Pastille">
+                    <p>1</p>
+                </div>
+                <p><i class="fa-solid fa-mobile-screen-button fa_color margeicon"></i>Choisissez un restaurant</p>
+            </div>
+            <div class="Fonctionnement_Cards">
+                <div class="Fonctionnement_Cards-Pastille">
+                    <p>2</p>
+                </div>
+                <p><i class="fa-solid fa-list-ul fa_color margeicon"></i>Composez votre menu</p>
+            </div>
+            <div class="Fonctionnement_Cards">
+                <div class="Fonctionnement_Cards-Pastille">
+                    <p>3</p>
+                </div>
+                <p><i class="fa-solid fa-store fa_color margeicon"></i>Dégustez au restaurant</p>
+            </div>
+        </div>
+    </section>
+    <main class="Fond_Section">
+        <div>
+            <h1 id="Ancreun" class="Main_Title">Restaurants</h1>
+        </div>
+        <div class="Card-container">
+            <article class="Card">
+                <div class="Card-content">
+                    <div class="Card_Pastille">
+                        <p>Nouveau</p>
+                    </div>
+                    <img src="/Images_et_textes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                    <h3 class="Card-title">La palette du goût</h3>
+                    <p class="Card-subtitle">Ménilmontant</p>
+                    <div class="Card_Coeur">
+                        <i class="fa-regular fa-heart coeurfav"></i>
+                        <i class="fa-solid fa-heart coeurfav"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="Card">
+                <a href="/menu.html">
+                    <div class="Card-content">
+                        <div class="Card_Pastille">
+                            <p>Nouveau</p>
+                        </div>
+                        <img src="/Images_et_textes_Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                        <h3 class="Card-title">La note enchantée</h3>
+                        <p class="Card-subtitle">Charonne</p>
+                        <i class="fa-regular fa-heart coeurfav"></i>
+                        <i class="fa-solid fa-heart coeurfav"></i>
+                    </div>
+                </a>
+            </article>
+            <article class="Card">
+                <div class="Card-content">
+                    <img src="/Images_et_textes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                    <h3 class="Card-title">À la française</h3>
+                    <p class="Card-subtitle">Cité Rouge</p>
+                    <div class="Card_Coeur">
+                        <i class="fa-regular fa-heart coeurfav"></i>
+                        <i class="fa-solid fa-heart coeurfav"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="Card">
+                <div class="Card-content">
+                    <img src="/Images_et_textes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                    <h3 class="Card-title">Le délice des sens</h3>
+                    <p class="Card-subtitle">Folie-Méricourt</p>
+                    <div class="Card_Coeur">
+                        <i class="fa-regular fa-heart coeurfav"></i>
+                        <i class="fa-solid fa-heart coeurfav"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="BasDePage">
+        <div>
+            <p class="Footer-logo">ohmyfood</p>
+        </div>
+        <div class="Footer-Liste">
+            <p><i class="fa-solid fa-utensils footericon"></i>Proposer un restaurant</p>
+            <p><i class="fa-solid fa-handshake-angle footericon"></i>Devenir partenaire</p>
+            <p>Mentions légales</p>
+            <p><a href="mailto:samuel.dmb@outlook.fr">Contact</a></p>
+        </div>
+    </footer>
+</body>
+</html>
