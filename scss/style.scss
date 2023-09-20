@@ -38,7 +38,7 @@ h1{
     justify-content: center;
     z-index: 5;
     animation: loaderoff 1s ease-out forwards;
-    animation-delay: 4.5s;
+    animation-delay: 2.7s;
 
     @keyframes loaderoff {
         0%{
@@ -87,7 +87,7 @@ h1{
         @for $u from 1 through 8{
             &:nth-child(#{$u}){
                 animation-name: loadingpagecolor;
-                animation-delay: 0.5s * $u;
+                animation-delay: 0.3s * $u;
                 // animation-timing-function: cubic-bezier(0,.38,.89,-0.12);
             } 
         }
@@ -315,8 +315,8 @@ header{
             transition: all 1s;
             background-color: $vert;
             display: flex;
-            margin-right: -70px;
-            width: 70px;
+            margin-right: -74px;
+            width: 75px;
             border-radius: 0px 15px 15px 0px;
             
             .checkicon{
@@ -408,7 +408,7 @@ header{
         background-color: #FFFFFF;
         border-radius: 15px;
         margin: 0px 15px 20px 15px;
-        height: 250px;
+        height: 240px;
         
         &-subtitle{
             font-weight: lighter;
@@ -422,7 +422,7 @@ header{
         }
         
         img{
-            height: 190px;
+            height: 175px;
             object-fit: cover;
             width: 100%;
             border-top-left-radius: 15px;
