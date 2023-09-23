@@ -77,18 +77,10 @@ h1{
             
         }
 
-        // @for $u from 1 through 8{
-        //     &:nth-child(#{$u}){
-        //         animation-name: loadingpageup;
-        //         animation-delay: 1s * $u;
-        //     }
-        // }
-
         @for $u from 1 through 8{
             &:nth-child(#{$u}){
                 animation-name: loadingpagecolor;
                 animation-delay: 0.3s * $u;
-                // animation-timing-function: cubic-bezier(0,.38,.89,-0.12);
             } 
         }
     }
